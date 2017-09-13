@@ -1,0 +1,1 @@
+alert("Called by srcipt with src.");
