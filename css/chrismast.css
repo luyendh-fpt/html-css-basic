@@ -1,0 +1,33 @@
+/*Xử lý thằng navigation*/
+body{
+	background: black;
+	font-style: underline;
+}
+/*Xử lý thằng navigation*/
+
+
+
+
+p{
+	color: white;
+}
+
+img {
+	width: 400px;
+}
+
+#slogan {
+	color: blue;
+}
+
+.my-slogan {
+	color: orange;
+}
+
+h1{
+	color: red !important;
+}
+
+h1{
+	color: yellow;
+}
