@@ -1,0 +1,54 @@
+* {
+    font-family: Tahoma, arial;
+    font-size: 15px;    
+}
+
+body {
+    margin: 0 12%;
+}
+
+header {
+    height: 70px;
+}
+
+footer {
+    height: 50px;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 60px;
+    float: left;
+}
+
+.logo-text {
+    float: left;
+    margin: 20px 10px;
+}
+
+.menu {
+    float: right;
+}
+
+ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.cuc-bai-viet {
+    width: 30%;
+    height: 200px;
+    float: left;
+    background-color: red;
+    margin: 3px;
+}
+
+.clear-both {
+    clear: both;
+}
+
+
+
