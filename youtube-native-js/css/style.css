@@ -1,0 +1,44 @@
+* {
+	font-family: "Tahoma";
+}
+
+.form-group {	
+	margin: 10px 5px;
+}
+
+.form-group label:first-child {
+	width: 15%;
+	float: left;
+}
+
+.form-group label {	
+	float: left;
+}
+
+.form-group .form-control {	
+	float: left;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.form-group::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.long-input {
+	width: 40%;
+}
+
+.normal-input {
+	width: 30%;
+}
+
+.short-input {
+	width: 20%;
+}
+
+.error-msg {
+	color: red;
+}

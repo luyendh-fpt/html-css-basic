@@ -1,0 +1,25 @@
+* {
+	font-family: Tahoma;
+}
+label {
+	float: left;
+	width: 200px;
+}
+
+.form-group {
+	margin: 5px;
+}
+
+.input-normal {
+	width: 250px;
+}
+
+.message{
+	color: red;
+}
+
+.dao-tuan-tu {
+	font-size: 50px;
+	color: pink;
+	font-weight: bold;
+}

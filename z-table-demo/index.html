@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Table Demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form action="#" method="POST">
+		<fieldset>
+			<legend>Thông tin cơ bản</legend>
+			<table>
+				<tr>
+					<td>Tên tài khoản</td>
+					<td>
+						<input type="text" name="username" class="normal-input">
+					</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>
+						<input type="email" name="email" class="normal-input">
+					</td>
+				</tr>
+				<tr>
+					<td>Mật khẩu</td>
+					<td>
+						<input type="password" name="password" class="normal-input">
+					</td>
+				</tr>
+				<tr>
+					<td>Xác nhận mật khẩu</td>
+					<td>
+						<input type="password" name="confirmPassword" class="normal-input">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Thông tin chi tiết</legend>
+			<table>
+				<tr>
+					<td>Họ tên</td>
+					<td>
+						<input type="text" name="fullName" class="long-input">
+					</td>
+				</tr>
+				<tr>
+					<td>Ngày sinh</td>
+					<td>
+						<input type="date" name="fullName" class="normal-input">
+					</td>
+				</tr>
+				<tr>
+					<td>Giới tính</td>
+					<td>
+						<input type="radio" name="gender" value="1" checked> Male
+						<input type="radio" name="gender" value="0"> Female
+					</td>
+				</tr>
+					<tr>
+						<td>Sở thích</td>
+						<td>
+							<input type="checkbox" name="favourite" value="sport"> Thể thao
+							<input type="checkbox" name="favourite" value="movie"> Xem phim
+							<input type="checkbox" name="favourite" value="music"> Nghe nhạc
+							<input type="checkbox" name="favourite" value="reading"> Đọc sách
+						</td>
+					</tr>
+					<tr>
+						<td>Ảnh đại diện</td>
+						<td><input type="file" name="avatar"></td>
+					</tr>
+					<tr>
+						<td>Giới thiệu về bản thân</td>
+						<td>
+							<textarea name="introduce"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button>Submit</button>
+							<button type="reset">Reset</button>			
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+	</form>
+	
+</body>
+</html>

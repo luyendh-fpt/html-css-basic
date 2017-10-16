@@ -1,0 +1,56 @@
+* {
+	font-family: Tahoma;	
+}
+
+header {
+	height: 120px;
+	background-color: #ac59d5;
+	border-radius: 5px;
+}
+
+footer {
+	height: 130px;
+	background-color: #37abd4;
+	border-radius: 5px;
+}
+
+nav {
+	float: left;
+	width: 25%;	
+}
+
+section {
+	float: left;
+	width: 75%;	
+}
+
+aside {		
+	float: left;
+	width: 20%;
+	background-color: orange;
+}
+
+article {
+	overflow: auto;
+	height: 150px;
+	width: 28%;
+	display: inline-block;	
+	padding: 20px 10px;
+	margin: 5px;
+	border: 1px solid #e7e7e7;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #888888;
+}
+
+article .title {
+	font-weight: bolder;
+	margin-bottom: 5px;
+	color: #77bfff;
+}
+
+main::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+

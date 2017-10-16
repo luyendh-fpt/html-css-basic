@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Youtube form</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Video form</h1>
+	<form>
+		<div class="form-group">
+			<label>Video ID</label>
+			<input id="video-id" type="text" name="video-id" class="input-normal">			
+		</div>
+		<div class="form-group">
+			<label>Video Name</label>
+			<input id="video-name" type="text" name="video-name" class="input-normal">
+			<span class="message"></span>
+		</div>
+		<div class="form-group">
+			<label>Description</label>
+			<textarea id="description" name="description" rows="5" cols="60"></textarea>
+			<span class="message"></span>
+		</div>
+		<div class="form-group">
+			<label>Keyword</label>
+			<input id="keyword" type="text" name="keyword" class="input-normal">
+			<span class="message"></span>
+		</div>		
+		<div class="form-group">
+			<label>&nbsp;</label>
+			<div>
+				<input id="btnSubmit" type="button" name="Submit" value="Submit">			
+				<input type="reset" name="Reset" value="Reset">
+			</div>
+		</div>
+	</form>	
+	<script type="text/javascript" src="my-script.js"></script>		
+</body>
+</html>
