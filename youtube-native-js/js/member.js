@@ -1,6 +1,6 @@
 var MEMBER_API = "https://youtube-api-challenger2.appspot.com/members";
 var btnSubmit = document.getElementById("btnSubmit");
-
+alert(localStorage.getItem("secretToken"));
 if(btnSubmit != null){
 	btnSubmit.onclick = function(){
 		validateForm();
@@ -10,7 +10,7 @@ if(btnSubmit != null){
 function validateForm(){
 	// Lấy giá trị các phần tử trong form.
 	// Validate username.
-	var usernameInput = document.forms["member"].elements["username"];
+	var usernameInput = document.forms["member"].elements["username"];	
 	var username = usernameInput.value;
 	if (username.length == 0){
 		usernameInput.nextElementSibling.innerHTML = "Vui lòng nhập thông tin tài khoản!";
@@ -19,6 +19,7 @@ function validateForm(){
 	}else {
 		usernameInput.nextElementSibling.innerHTML = "";
 	}
+
 	// Validate password.
 	var passwordInput = document.forms["member"].elements["password"];
 	var password = passwordInput.value;
@@ -29,6 +30,7 @@ function validateForm(){
 	}else {
 		passwordInput.nextElementSibling.innerHTML = "";
 	}
+
 	// Validate repassword.
 	var rePasswordInput = document.forms["member"].elements["re-password"];
 	var rePassword = rePasswordInput.value;
@@ -37,6 +39,7 @@ function validateForm(){
 	}else{
 		rePasswordInput.nextElementSibling.innerHTML = "";
 	}
+
 	// Validate fullName.
 	var fullNameInput = document.forms["member"].elements["fullName"];
 	var fullName = fullNameInput.value;
@@ -58,8 +61,8 @@ function validateForm(){
 	}else {
 		emailInput.nextElementSibling.innerHTML = "";
 	}
+	
 	// var birthDay = document.forms["member"].elements["birthDay"].value;
-
 
 	// // Kiểm tra trong danh sách mảng gender, phần tử nào được chọn thì 
 	// // sẽ lấy giá trị của phần tử đấy.
@@ -73,31 +76,38 @@ function validateForm(){
 	// 	}
 	// }
 
-	var myObject = {
-		"data":{
-		    "type":"Member",
-		     "attributes":{
-		        "username": username,
+	var object = {
+		"data": {
+			"type": "Member",
+			"attributes": {
+				"username": username,
 		        "password": password,
 		        "fullName": fullName,
 		        "email": email,
 		        "birthDay":15066499900231,
 		        "gender":1
-		      }
-		    }
+			}
+		}
 	}
 
 	// construct an HTTP request
 	var xhr = new XMLHttpRequest(); // Đối tượng có sẵn.
 	// Mở kết nối tới server với địa chỉ cho trước. Phương thức POST.
-	xhr.open("POST", MEMBER_API, true);	
+	xhr.open("POST", MEMBER_API, true);	// gửi lên đâu, kiểu gửi là gì.
 	// Gửi dữ liệu theo định dạng json.
-	xhr.send(JSON.stringify(myObject));
-	xhr.onreadystatechange = function() {
-		// Khi việc gửi dữ liệu lên server thành công.
+	xhr.send(JSON.stringify(object)); // gửi cái gì
+	xhr.onreadystatechange = function() { // gửi xong rồi thì sao.
+		// Gửi thành công rồi thì sao.
 		if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 201) {
 			// Hiển thị thông báo cho người dùng.
-			alert("Send success." + xhr.responseText);
+			document.getElementById("total-msg").classList = "success-msg";
+			document.getElementById("total-msg").innerHTML = "Đăng ký thành công.";			
+		} else {
+			if(xhr.readyState === XMLHttpRequest.DONE){
+				var responseObject = JSON.parse(xhr.responseText);
+				document.getElementById("total-msg").classList = "error-msg";
+				document.getElementById("total-msg").innerHTML = responseObject.errors[0].title + " " + responseObject.errors[0].detail;
+			}			
 		}	  
 	};
 }
