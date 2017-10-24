@@ -1,6 +1,5 @@
 var MEMBER_API = "https://youtube-api-challenger2.appspot.com/members";
 var btnSubmit = document.getElementById("btnSubmit");
-alert(localStorage.getItem("secretToken"));
 if(btnSubmit != null){
 	btnSubmit.onclick = function(){
 		validateForm();

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">    
+    		<div class="navbar-header">      
+      			<a class="navbar-brand" href="#">Tubeonfire</a>
+    		</div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" 
+		    	id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active">
+		        	<a href="#">
+	        			<span class="glyphicon glyphicon-home"></span> 
+	        			Home <span class="sr-only">(current)</span>
+	        		</a>
+	        	</li>
+		        <li>
+		        	<a href="#">
+		        		<span class="glyphicon glyphicon-list"></span>
+		        		Playlist
+		        	</a>
+		        </li>
+		        <li class="dropdown">
+		        	<a data-toggle="dropdown" href="#">
+		        		<span class="glyphicon glyphicon-play"></span>
+		        		Video <span class="caret"></span>
+		        	</a>
+		        	<ul class="dropdown-menu">
+			            <li><a href="#">Create</a></li>
+			            <li><a href="#">List</a></li>		
+		          	</ul>
+		        </li>		        
+		      </ul>      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li>
+		        	<a href="#">
+		        		<span class="glyphicon glyphicon-user"></span>
+		        		&nbsp;Đăng ký
+	        		</a>
+		        </li>
+		        <li class="dropdown">
+		        	<a href="" data-toggle="dropdown">
+		        		<span class="glyphicon glyphicon-log-in"></span>
+		        		&nbsp;Đăng nhập
+		        	</a>
+		        	<ul class="dropdown-menu">
+		        		<li>
+		        			<div class="row">
+			        			<div class="col-md-12">
+			        				<form class="form">
+									  <div class="form-group">    
+									    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+									  </div>
+									  <div class="form-group">	    
+									    <input type="password" class="form-control" placeholder="Mật khẩu">
+									  </div>				 
+									  <button type="submit" class="btn btn-primary">Đăng nhập</button>
+									</form>
+			        			</div>		        			
+			        		</div>
+		        		</li>		        					            		
+		          	</ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<main class="container">
+		<ol class="breadcrumb">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Library</a></li>
+		  <li class="active">Data</li>
+		</ol>
+		<div class="row">
+			<div class="col-md-6">				
+				<!-- 4:3 aspect ratio -->
+				<div class="embed-responsive embed-responsive-4by3">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/dns2WLu8Su8" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">Panel title</h3> 
+					</div>
+					<div class="panel-body">
+						<div class="row">
+	                        <div class="col-md-4 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><img src="https://i.ytimg.com/vi/0orephMHb5o/mqdefault.jpg" alt="Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix" class="hover-flash" style="width: 100%"></a>
+	                        </div>
+
+	                        <div class="col-md-8 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><strong ng-bind="video.attributes.name" class="ng-binding">Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix</strong></a>
+	                            <p class="ng-binding"><strong>Xuất bản:</strong> 10/20/2017</p>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+	                        <div class="col-md-4 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><img src="https://i.ytimg.com/vi/0orephMHb5o/mqdefault.jpg" alt="Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix" class="hover-flash" style="width: 100%"></a>
+	                        </div>
+
+	                        <div class="col-md-8 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><strong ng-bind="video.attributes.name" class="ng-binding">Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix</strong></a>
+	                            <p class="ng-binding"><strong>Xuất bản:</strong> 10/20/2017</p>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+	                        <div class="col-md-4 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><img src="https://i.ytimg.com/vi/0orephMHb5o/mqdefault.jpg" alt="Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix" class="hover-flash" style="width: 100%"></a>
+	                        </div>
+
+	                        <div class="col-md-8 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><strong ng-bind="video.attributes.name" class="ng-binding">Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix</strong></a>
+	                            <p class="ng-binding"><strong>Xuất bản:</strong> 10/20/2017</p>
+	                        </div>
+                    	</div>
+                    	<div class="row">
+	                        <div class="col-md-4 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><img src="https://i.ytimg.com/vi/0orephMHb5o/mqdefault.jpg" alt="Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix" class="hover-flash" style="width: 100%"></a>
+	                        </div>
+
+	                        <div class="col-md-8 col-sm-6 col-ms-6 col-xs-12">
+	                            <a href="#!watch?id=1508487510047"><strong ng-bind="video.attributes.name" class="ng-binding">Nonstop DJ - Khẽ Thôi Cưng À - Quỳnh Anh Selena Mix</strong></a>
+	                            <p class="ng-binding"><strong>Xuất bản:</strong> 10/20/2017</p>
+	                        </div>
+                    	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
