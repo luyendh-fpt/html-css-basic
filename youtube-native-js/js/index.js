@@ -61,10 +61,8 @@ function loadVideo(keyword){
 }
 
 function closeVideo(){
-	modal.style.display = "none";
-    var videoSrc = videoFrame.src;
+	modal.style.display = "none";    
     videoFrame.src = "";
-    videoFrame.src = videoSrc;
 }
 
 function showVideo(videoId){		
