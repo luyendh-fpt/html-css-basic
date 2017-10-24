@@ -1,37 +1,32 @@
+document.addEventListener("DOMContentLoaded", function(event) {    
+	var inputSearch = document.getElementById("keyword");
+	inputSearch.onkeydown = function(event){
+		if (event.keyCode == 13){
+			loadVideo(this.value);
+		}
+	}
+	loadVideo("Ha Anh Tuan");
+});
+
 // Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+var videoFrame = document.getElementById("video-frame");
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+    closeVideo();
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        closeVideo();
     }
-}
-
-function showVideo(videoId){	
-	var videoFrame = document.getElementById("video-frame");	
-	videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
-	setTimeout(function(){ 
-		modal.style.display = "block";
-	}, 300);	
-}
-
-
-
-var inputSearch = document.getElementById("keyword");
-inputSearch.onkeydown = function(event){
-	if (event.keyCode == 13){
-		loadVideo(this.value);
-	}
-}
+}	
 
 function loadVideo(keyword){
 	var YOUTUBE_API = "https://content.googleapis.com/youtube/v3/search?q=" + keyword + "&type=video&maxResults=9&part=snippet&key=AIzaSyAwUjk3CwtXCiB_W6Xi0colfOKPgm90hHc";
@@ -64,4 +59,19 @@ function loadVideo(keyword){
 	};
 	xhr.send();
 }
-loadVideo("Ha Anh Tuan");
+
+function closeVideo(){
+	modal.style.display = "none";
+    var videoSrc = videoFrame.src;
+    videoFrame.src = "";
+    videoFrame.src = videoSrc;
+}
+
+function showVideo(videoId){		
+	videoFrame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+	setTimeout(function(){ 
+		modal.style.display = "block";
+	}, 300);	
+}
+
+
