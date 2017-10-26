@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Canvas demo</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div>
+		<canvas width="480" height="270" id="my-canvas"></canvas>
+	</div>
+	<div>
+		<button id="btnUp" onclick="moveUp()">Up</button>	
+	</div>
+	<div>
+		<button id="btnLeft" onclick="moveLeft()">Left</button>
+		<button id="btnRight" onclick="moveRight()">Right</button>	
+	</div>
+	<div>
+		<button id="btnDown" onclick="moveDown()">Down</button>	
+	</div>
+	<audio id="audio" src="sound/stage_start.ogg" 
+		preload="auto" controls="none" style="display: none">
+	<audio id="move" src="sound/bullet_hit_2.ogg" 
+		preload="auto" controls="none" style="display: none">
+	<script type="text/javascript" src="js/my-script.js"></script>
+</body>
+</html>
